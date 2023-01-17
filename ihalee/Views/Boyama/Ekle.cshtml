@@ -1,0 +1,117 @@
+﻿@model ihalee.Models.Boyama
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">TALEP EKLE</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Forms</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Form-Layouts</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- Row -->
+            <div class="row">
+
+                <div class="col-md-12 col-xl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">DETAYLAR</h4>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal" asp-controller="Boyama" asp-action="Ekle" method="post">
+
+
+                                @*<div class=" row mb-4">
+                                <label for="inputName" class="col-md-3 form-label">Renk</label>
+                                <div class="col-md-9">
+                                <input type="text" name="Renk" class="form-control" id="inputName" >
+                                </div>
+                                </div>*@
+
+
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Renk</label>
+                                    <div class="col-md-9">
+                                        <select>
+                                            <span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 500%;">
+                                                <span class="selection">
+                                                    <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-country-pz-container">
+                                                        <span class="select2-selection__rendered" id="select2-country-pz-container" title="Poland">Poland</span>
+                                                        <span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>
+                                                    </span>
+                                                </span>
+                                                <span class="dropdown-wrapper" aria-hidden="true">
+
+                                                </span>
+                                            </span>
+                                            <option value="br">Mavi</option>
+                                            <option value="cz">Kırmızı</option>
+                                            <option value="de">Siyah</option>
+                                            <option value="pl" selected="">Kahverengi</option>
+                                        </select>
+                                    </div>
+
+
+
+                                    <div class=" row mb-4">
+                                        <label for="inputName" class="col-md-3 form-label">Oda Sayısı</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="OdaSayisi" class="form-control" id="inputName" placeholder="2+1">
+                                        </div>
+                                    </div>
+                                    <div class=" row mb-4">
+                                        <label for="inputName" class="col-md-3 form-label">Metre Kare</label>
+                                        <div class="col-md-9">
+                                            <input type="number" name="MetreKare" class="form-control" id="inputName">
+                                        </div>
+                                    </div>
+                                    <div class=" row mb-4">
+                                        <label for="inputName" class="col-md-3 form-label">Başlama Tarihi</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="BaslamaTarihi" class="form-control" id="inputName">
+                                        </div>
+                                    </div>
+                                    <div class=" row mb-4">
+                                        <label for="inputName" class="col-md-3 form-label">Başlama Niteliği</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="BoyamaNiteligi" class="form-control" id="inputName">
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="mb-0 mt-4 row justify-content-end">
+                                        <div class="col-md-9">
+                                            <button type="submit" class="btn btn-primary">Ekle</button>
+                                            <button class="btn btn-secondary">İptal</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Row -->
+            <!--Row -->
+            <!--End Row-->
+            <!--Row -->
+            <!--End Row-->
+        </div>
+        <!-- CONTAINER CLOSED -->
+
+    </div>
+</div>

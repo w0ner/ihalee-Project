@@ -1,0 +1,141 @@
+﻿@model List<Buzdolabı>
+@{
+    Layout = "_Layout";
+}
+
+
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">BUZDOLABI</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW END -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <div class="row">
+                <div class="col-md-12 col-xl-4">
+                    <div class="card">
+                        <div class="card-header border-bottom">
+                            <h5 class="card-title">Buzdolabı Özeti</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="clearfix row mb-4">
+                                <div class="col">
+                                    <div class="float-start">
+                                        <h5 class="mb-0"><strong>Marka</strong></h5>
+                                        <small class="text-muted">weekly profit</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="float-end">
+                                        <h4 class="fw-bold mb-0 mt-2 text-blue">
+                                            @Model[0].Marka
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix row mb-4">
+                                <div class="col">
+                                    <div class="float-start">
+                                        <h5 class="mb-0"><strong>Hacim</strong></h5>
+                                        <small class="text-muted">weekly profit</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="float-end">
+                                        <h4 class="fw-bold mt-2 mb-0 text-success">@Model[0].Hacim</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix row mb-4">
+                                <div class="col">
+                                    <div class="float-start">
+                                        <h5 class="mb-0"><strong>Enerji Sınıfı</strong></h5>
+                                        <small class="text-muted">weekly profit</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="float-end">
+                                        <h4 class="fw-bold mt-2 mb-0 text-warning">@Model[0].EnerjiSınıfı</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix row mb-4">
+                                <div class="col">
+                                    <div class="float-start">
+                                        <h5 class="mb-0"><strong>No Frost Mu ?</strong></h5>
+                                        <small class="text-muted">weekly profit</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="float-end">
+                                        <h4 class="fw-bold mt-2 mb-0 text-danger">@Model[0].NoFrostMu.ToString().Replace("True","Evet").Replace("False","Hayır")</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix row mb-4">
+                                <div class="col">
+                                    <div class="float-start">
+                                        <h5 class="mb-0"><strong>Kapı Sayısı</strong></h5>
+                                        <small class="text-muted">weekly profit</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="float-end">
+                                        <h4 class="fw-bold mt-2 mb-0 text-info">@Model[0].KapıSayısı</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix row mb-0">
+                                <div class="col">
+                                    <div class="float-start">
+                                        <h5 class="mb-0"><strong>Renk</strong></h5>
+                                        <small class="text-muted">weekly profit</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="float-end">
+                                        <h4 class="fw-bold mt-2 mb-0 text-info">@Model[0].Renk</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- COL END -->
+                <!-- COL END -->
+                <!-- COL END -->
+            </div>
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+    </div>
+</div>

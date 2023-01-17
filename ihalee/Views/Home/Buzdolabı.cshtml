@@ -1,0 +1,164 @@
+﻿@using ihalee.ViewModel;
+@model BuzdolabıViewModel
+@{
+    ViewData["Title"] = "Buzdolabı";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Buzdolabı Yönetimi</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data Table</li>
+                    </ol>
+                </div>
+
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- Row -->
+            <div class="row row-sm">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Tüm Buzdolapları</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <div id="basic-datatable_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                                    <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="basic-datatable_length"><label>Show <select name="basic-datatable_length" aria-controls="basic-datatable" class="form-select form-select-sm select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 61.2px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-basic-datatable_length-7o-container"><span class="select2-selection__rendered" id="select2-basic-datatable_length-7o-container" title="10">10</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="basic-datatable_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control" placeholder="Search..." aria-controls="basic-datatable"></label></div></div></div><div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="table table-bordered text-nowrap border-bottom dataTable no-footer" id="basic-datatable" role="grid" aria-describedby="basic-datatable_info">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="wd-15p border-bottom-0 sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="First name: activate to sort column descending" style="width: 81.4625px;">ID</th>
+                                                        <th class="wd-15p border-bottom-0 sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="First name: activate to sort column descending" style="width: 81.4625px;">Renk</th>
+                                                        <th class="wd-15p border-bottom-0 sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="First name: activate to sort column descending" style="width: 81.4625px;">Hacim</th>
+                                                        <th class="wd-15p border-bottom-0 sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="First name: activate to sort column descending" style="width: 81.4625px;">Marka</th>
+                                                        <th class="wd-15p border-bottom-0 sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="First name: activate to sort column descending" style="width: 81.4625px;">Buzluk Türü</th>
+                                                        <th class="wd-15p border-bottom-0 sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="First name: activate to sort column descending" style="width: 81.4625px;">Enerji Sınıfı</th>
+                                                        <th class="wd-15p border-bottom-0 sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="First name: activate to sort column descending" style="width: 81.4625px;">Kapı Sayısı</th>
+                                                        <th class="wd-15p border-bottom-0 sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="First name: activate to sort column descending" style="width: 81.4625px;">Nofrost Var mı ?</th>
+
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    @foreach (Buzdolabı buzdolabı in Model.BuzdolabıListesi)
+                                                    {
+                                                        <tr class="odd">
+                                                            <td class="sorting_1">@buzdolabı.BuzdolabıID</td>
+                                                            <td>@buzdolabı.Renk</td>
+                                                            <td>@buzdolabı.Hacim</td>
+                                                            <td>@buzdolabı.Marka</td>
+                                                            <td>@buzdolabı.BuzlukTürü</td>
+                                                            <td>@buzdolabı.EnerjiSınıfı</td>
+                                                            <td>@buzdolabı.KapıSayısı</td>
+                                                            <td>@buzdolabı.NoFrostMu</td>
+                                                        </tr>
+                                                    }
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12"><div class="dataTables_info" id="basic-datatable_info" role="status" aria-live="polite">Toplam @Model.TotalKayıtNO kayıttan şu anda @Model.BaşKayıtNO - @Model.SonKayıtNO arasındaki kayıtlar listelenmektedir.</div></div><div class="col-sm-12 col-md-12">
+                                            <div class="dataTables_paginate paging_simple_numbers" id="basic-datatable_paginate">
+                                                <ul class="pagination">
+                                                    @if (Model.AktifSayfa>1)
+                                                    {
+                                                        <li class="paginate_button page-item previous" id="basic-datatable_previous"><a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=@(Model.AktifSayfa-1)" aria-controls="basic-datatable" data-dt-idx="0" tabindex="0" class="page-link">Önceki</a></li>
+
+                                                    }
+
+
+                                                    <li class="paginate_button page-item active">
+                                                        <a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=1" aria-controls="basic-datatable" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                                    </li>
+                                                    @if (Model.AktifSayfa > 3)
+                                                    {
+                                                        <li class="paginate_button page-item active">
+                                                            <a aria-controls="basic-datatable" class="page-link">...</a>
+                                                        </li>
+                                                    }
+
+                                                    @if (Model.AktifSayfa > 2)
+                                                    {
+
+                                                        if (Model.AktifSayfa<Model.SonSayfa-2)
+                                                        {
+                                                            @for (int i = Model.AktifSayfa - 1; i <= Model.AktifSayfa + 1; i++)
+                                                            {
+                                                                <li class="paginate_button page-item active">
+                                                                    <a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=@(i)" aria-controls="basic-datatable" data-dt-idx="@i" tabindex="0" class="page-link">@i</a>
+                                                                </li>
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            <li class="paginate_button page-item active">
+                                                                <a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=@(Model.SonSayfa-2)" aria-controls="basic-datatable" data-dt-idx="@(Model.SonSayfa-2)" tabindex="0" class="page-link">@(Model.SonSayfa - 2)</a>
+                                                            </li>
+
+                                                            <li class="paginate_button page-item active">
+                                                                <a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=@(Model.SonSayfa-1)" aria-controls="basic-datatable" data-dt-idx="@(Model.SonSayfa-1)" tabindex="0" class="page-link">@(Model.SonSayfa - 1)</a>
+                                                            </li>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <li class="paginate_button page-item active">
+                                                            <a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=2" aria-controls="basic-datatable" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                                        </li>
+
+                                                        <li class="paginate_button page-item active">
+                                                            <a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=3" aria-controls="basic-datatable" data-dt-idx="3" tabindex="0" class="page-link">3</a>
+                                                        </li>
+                                                    }
+
+                                                    @if (Model.AktifSayfa < Model.SonSayfa - 2)
+                                                    {
+                                                        <li class="paginate_button page-item active">
+                                                            <a aria-controls="basic-datatable" class="page-link">...</a>
+                                                        </li>
+                                                    }
+
+                                                    <li class="paginate_button page-item active">
+                                                        <a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=@(Model.SonSayfa)" aria-controls="basic-datatable" data-dt-idx="@(Model.SonSayfa)" tabindex="0" class="page-link">@(Model.SonSayfa)</a>
+                                                    </li>
+
+                                                    @if (Model.AktifSayfa<Model.SonSayfa)
+                                                    {
+                                                        <li class="paginate_button page-item next" id="basic-datatable_next"><a href="https://localhost:7269/Home/Buzdolab%C4%B1?aktifSayfaNO=@(Model.AktifSayfa+1)" aria-controls="basic-datatable" data-dt-idx="6" tabindex="0" class="page-link">Sonraki</a></li>
+
+                                                    }
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Row -->
+
+        </div>
+        <!-- CONTAINER CLOSED -->
+
+    </div>
+</div>

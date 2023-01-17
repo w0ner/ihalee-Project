@@ -1,0 +1,67 @@
+﻿@model ihalee.Models.Araba
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Araba</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ArabaID" />
+            <div class="form-group">
+                <label asp-for="AraçTipi" class="control-label"></label>
+                <input asp-for="AraçTipi" class="form-control" />
+                <span asp-validation-for="AraçTipi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Marka" class="control-label"></label>
+                <input asp-for="Marka" class="form-control" />
+                <span asp-validation-for="Marka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelYılı" class="control-label"></label>
+                <input asp-for="ModelYılı" class="form-control" />
+                <span asp-validation-for="ModelYılı" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YakıtTipi" class="control-label"></label>
+                <input asp-for="YakıtTipi" class="form-control" />
+                <span asp-validation-for="YakıtTipi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VitesTipi" class="control-label"></label>
+                <input asp-for="VitesTipi" class="form-control" />
+                <span asp-validation-for="VitesTipi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotorHacmi" class="control-label"></label>
+                <input asp-for="MotorHacmi" class="form-control" />
+                <span asp-validation-for="MotorHacmi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Renk" class="control-label"></label>
+                <input asp-for="Renk" class="form-control" />
+                <span asp-validation-for="Renk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
